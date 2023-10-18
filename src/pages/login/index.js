@@ -32,7 +32,7 @@ const LoginPage = () => {
 
 					<form className="mt-10">
 						<div>
-							<label class="block text-sm font-medium leading-6 text-gray-400">
+							<label className="block text-sm font-medium leading-6 text-gray-400">
 								Email
 							</label>
 
@@ -41,12 +41,12 @@ const LoginPage = () => {
 								type="text"
 								required
 								placeholder="Masukan alamat email"
-								class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+								className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 							/>
 						</div>
 
 						<div className="mt-5">
-							<label class="block text-sm font-medium leading-6 text-gray-400">
+							<label className="block text-sm font-medium leading-6 text-gray-400">
 								Kata Sandi
 							</label>
 
@@ -56,13 +56,13 @@ const LoginPage = () => {
 								autocomplete="current-password"
 								required
 								placeholder="Masukan kata sandi"
-								class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+								className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 							/>
 						</div>
 
 						<button
 							type="submit"
-							class="flex w-full mt-16 justify-center rounded-md bg-[#FBB017] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#FBB017]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+							className="flex w-full mt-16 justify-center rounded-md bg-[#FBB017] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#FBB017]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
 							Masuk
 						</button>
 					</form>
