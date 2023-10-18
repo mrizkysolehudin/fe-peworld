@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar = () => {
 	return (
-		<nav className="flex justify-between py-7 px-20 w-screen shadow-md">
+		<nav className="flex justify-between py-7 px-20 w-screen shadow-lg">
 			<Link href="/">
 				<Image src="/assets/icons/logo-indigo.svg" width={127} height={35} />
 			</Link>

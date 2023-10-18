@@ -25,12 +25,6 @@ export default function HomePage({ data }) {
 			<div>
 				<Navbar />
 
-				<div>
-					<p>no: {data.id}</p>
-					<p>title: {data.title}</p>
-					<p>user id: {data.userId}</p>
-				</div>
-
 				<main className="w-[100vw]">
 					<section className="flex w-screen mt-28 px-20">
 						<div className="w-6/12 mt-[5vw]">
