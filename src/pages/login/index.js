@@ -7,7 +7,8 @@ import React from "react";
 const LoginPage = () => {
 	const router = useRouter();
 
-	const handleLogin = () => {
+	const handleLogin = (e) => {
+		e.preventDefault();
 		router.push("/");
 	};
 
@@ -80,7 +81,7 @@ const LoginPage = () => {
 						</div>
 
 						<button
-							onClick={() => handleLogin()}
+							onClick={(e) => handleLogin(e)}
 							type="submit"
 							className="flex w-full mt-16 justify-center rounded-md bg-[#FBB017] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#FBB017]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
 							Masuk
