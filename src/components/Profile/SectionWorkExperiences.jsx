@@ -25,7 +25,7 @@ const SectionWorkExperiences = () => {
 
 			<article className="flex gap-6 w-6/12">
 				<div className="relative w-[14vw] h-[6vw] mx-auto">
-					<Image src="/assets/images/tokped.png" alt="avatar" fill />
+					<Image src="/assets/images/tokped.png" alt="work experiences" fill />
 				</div>
 
 				<div>
