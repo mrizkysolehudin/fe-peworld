@@ -1,6 +1,15 @@
 import Footer from "@/components/Global/Footer";
 import Navbar from "@/components/Global/Navbar";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import {
+	ArrowDownLeftIcon,
+	ArrowDownRightIcon,
+	ArrowUpLeftIcon,
+	ArrowUpRightIcon,
+	ArrowsRightLeftIcon,
+	ArrowsUpDownIcon,
+	MapPinIcon,
+	PhotoIcon,
+} from "@heroicons/react/24/outline";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import React from "react";
@@ -63,7 +72,7 @@ const EditProfileCompanyPage = () => {
 							<form>
 								<article className="bg-white rounded-lg pb-12">
 									<h1 className="pt-5 px-7 text-xl font-semibold ">Data diri</h1>
-									<div className="w-full bg-gray-300 h-[1px] mt-3"></div>
+									<div className="w-full bg-gra4-300 h-[1px] mt-3"></div>
 
 									<div className="px-7 mt-5">
 										<div>
@@ -299,13 +308,38 @@ const EditProfileCompanyPage = () => {
 											<label className="block text-sm font-medium leading-6 text-gray-400">
 												Upload gambar
 											</label>
-											<input
-												id="about"
-												name="about"
-												type="file"
-												placeholder="Deskripsikan pekerjaan anda"
-												className="block w-full h-[13vw] mt-1 rounded-md border-[2px] border-dashed px-3 py-2 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6"
-											/>
+
+											<div className="border-[2px] border-dashed mt-1 rounded-md relative hover:bg-gray-50">
+												<div className="absolute w-full text-center text-sm ">
+													<div className="relative w-[10vw] h-[10vw] mx-auto">
+														<Image src="/assets/icons/cloud-arrow-up.svg" alt="" fill />
+													</div>
+													<p>Drag & Drop untuk Upload Gambar Aplikasi Mobile</p>
+													<p className="text-xs mt-2">
+														Atau cari untuk mengupload file dari direktorimu.
+													</p>
+													<div className="flex gap-4 justify-center mt-6">
+														<div className="flex justify-end items-center gap-1">
+															<PhotoIcon className="w-[3vw] h-[3vw] text-gray-400" />
+															<p className="w-6/12">High-Res Image PNG, JPG or GIF</p>
+														</div>
+														<div className="flex justify-start items-center gap-3 text-left">
+															<div className="border-2 border-gray-400 relative">
+																<ArrowUpRightIcon className="w-[2vw] h-[2vw] p-1 text-gray-400 rotate-3  absolute" />
+																<ArrowDownLeftIcon className="w-[2vw] h-[2vw] p-1 text-gray-400 rotate-3 " />
+															</div>
+															<p className="w-6/12">Size 1080x1920 or 600x800</p>
+														</div>
+													</div>
+												</div>
+												<input
+													id="about"
+													name="about"
+													type="file"
+													placeholder="Deskripsikan pekerjaan anda"
+													className="w-full h-[22vw] opacity-0 px-3 py-2 text-gray-900  placeholder:text-gray-400 sm:text-sm sm:leading-6"
+												/>
+											</div>
 										</div>
 
 										<div className="my-8 h-[1px] w-full bg-slate-200"></div>

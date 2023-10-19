@@ -47,7 +47,7 @@ const ProfileCompanyPage = () => {
 							</p>
 
 							<Link
-								href={`/profile/worker/edit`}
+								href={`/profile/company/edit`}
 								className="mt-8 block mx-auto rounded bg-[#5E50A1] px-3.5 pt-2 pb-2.5 w-[22vw] text-sm font-semibold text-white shadow-sm hover:bg-[#5E50A1]/90">
 								Edit profile
 							</Link>

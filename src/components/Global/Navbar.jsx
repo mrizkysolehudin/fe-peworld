@@ -32,7 +32,7 @@ const Navbar = () => {
 					<button className="hover:bg-gray-50 px-1 rounded">
 						<EnvelopeIcon className="w-[1.8vw] h-[1.8vw]" />
 					</button>
-					<Link href="/profile/worker" className="rounded-full">
+					<Link href="/profile/worker/1" className="rounded-full">
 						<Image src="/assets/images/avatar3.png" alt="" width={35} height={35} />
 					</Link>
 				</div>
