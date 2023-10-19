@@ -10,16 +10,28 @@ const LoginPage = () => {
 				<title>Login | Peworld</title>
 			</Head>
 
-			<div className="px-20 py-5 flex w-[100vw] bg-[#E2E5ED] h-screen gap-16">
-				<section className="relative w-1/2 bg-[#5E50A1]/60 text-white grid justify-center items-center h-[100%] ">
-					<div className="absolute top-0 flex m-4">
-						<Image src="/assets/icons/logo.svg" width={24} height={24} />
-						<p className="ml-2">Peworld</p>
-					</div>
+			<div className="px-20 pt-7 pb-10 flex w-[100vw] bg-[#F6F7F8] min-h-screen gap-16">
+				<section
+					style={{
+						backgroundImage: "url('/assets/images/bg-loginregister.png')",
+						backgroundSize: "cover",
+						backgroundPosition: "center",
+						backgroundRepeat: "no-repeat",
+						borderRadius: "10px",
+						boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+					}}
+					className="relative w-1/2 text-white grid justify-center items-center h-[95vh] ">
+					<div className="bg-[#5E50A1]/80 absolute w-full h-full"></div>
 
-					<h1 className="text-3xl w-7/12 mx-auto font-semibold">
-						Temukan developer berbakat & terbaik di berbagai bidang keahlian
-					</h1>
+					<div className="z-[1]">
+						<div className="absolute top-0 flex m-4">
+							<Image src="/assets/icons/logo.svg" width={24} height={24} />
+							<p className="ml-2">Peworld</p>
+						</div>
+						<h1 className="text-3xl w-7/12 mx-auto font-semibold">
+							Temukan developer berbakat & terbaik di berbagai bidang keahlian
+						</h1>
+					</div>
 				</section>
 
 				<section className="w-1/2 h-[100%] ">
@@ -69,7 +81,9 @@ const LoginPage = () => {
 
 					<p className="text-center mt-6">
 						Anda belum punya akun?{" "}
-						<Link href="/register" className="text-[#FBB017] hover:text-[#FBB017]/80">
+						<Link
+							href="/register/worker"
+							className="text-[#FBB017] hover:text-[#FBB017]/80">
 							Daftar disini
 						</Link>
 					</p>

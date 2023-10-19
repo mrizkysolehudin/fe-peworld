@@ -28,7 +28,6 @@ const RegisterWorkerPage = () => {
 							<Image src="/assets/icons/logo.svg" width={24} height={24} />
 							<p className="ml-2">Peworld</p>
 						</div>
-						{/* backround image */}
 						<h1 className="text-3xl w-7/12 mx-auto font-bold leading-10">
 							Temukan developer berbakat & terbaik di berbagai bidang keahlian
 						</h1>
@@ -124,8 +123,8 @@ const RegisterWorkerPage = () => {
 					</form>
 
 					<p className="text-center mt-6">
-						Anda belum punya akun?{" "}
-						<Link href="/register" className="text-[#FBB017] hover:text-[#FBB017]/80">
+						Anda sudah punya akun?{" "}
+						<Link href="/login" className="text-[#FBB017] hover:text-[#FBB017]/80">
 							Masuk disini
 						</Link>
 					</p>
