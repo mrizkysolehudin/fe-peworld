@@ -3,6 +3,7 @@ import Head from "next/head";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import Footer from "@/components/Global/Footer";
 import Navbar from "@/components/Global/Navbar";
+import Link from "next/link";
 
 export default function HomePage({ data }) {
 	const skillTalents = [
@@ -35,11 +36,11 @@ export default function HomePage({ data }) {
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod
 								ipsum et dui rhoncus auctor.
 							</p>
-							<button
-								type="button"
-								className="mt-10 rounded bg-[#5E50A1] px-3.5 pt-2 pb-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5E50A1]/90">
+							<Link
+								href="/home"
+								className="mt-10 block w-fit rounded bg-[#5E50A1] px-3.5 pt-2 pb-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5E50A1]/90">
 								Mulai Dari Sekarang
-							</button>
+							</Link>
 						</div>
 
 						<div className="w-6/12">
@@ -47,6 +48,7 @@ export default function HomePage({ data }) {
 								<Image
 									src="/assets/images/landingpage/hero.png"
 									fill
+									alt=""
 									className="rounded object-cover absolute"
 								/>
 
@@ -58,7 +60,12 @@ export default function HomePage({ data }) {
 							</div>
 
 							<div className="relative w-[15vw] h-[15vw] -mt-[12vw] -ml-[5.5vw]">
-								<Image src="/assets/icons/group-box.svg" fill className="absolute" />
+								<Image
+									src="/assets/icons/group-box.svg"
+									fill
+									alt=""
+									className="absolute"
+								/>
 							</div>
 						</div>
 					</section>
@@ -71,6 +78,7 @@ export default function HomePage({ data }) {
 								<Image
 									src="/assets/images/landingpage/hero2.png"
 									fill
+									alt=""
 									className="rounded object-cover absolute"
 								/>
 
@@ -82,7 +90,7 @@ export default function HomePage({ data }) {
 							</div>
 
 							<div className="relative w-[15vw] h-[15vw] -mt-[12vw] -ml-[3.5vw]">
-								<Image src="/assets/icons/dots.svg" fill className="absolute" />
+								<Image src="/assets/icons/dots.svg" fill alt="" className="absolute" />
 							</div>
 						</div>
 
@@ -93,19 +101,39 @@ export default function HomePage({ data }) {
 
 							<ul className="gap-6 grid mt-10 ">
 								<p className="flex gap-3">
-									<Image src="/assets/icons/checklist.svg" width={24} height={24} />
+									<Image
+										src="/assets/icons/checklist.svg"
+										alt=""
+										width={24}
+										height={24}
+									/>
 									Lorem ipsum dolor sit amet.
 								</p>
 								<p className="flex gap-3">
-									<Image src="/assets/icons/checklist.svg" width={24} height={24} />
+									<Image
+										src="/assets/icons/checklist.svg"
+										alt=""
+										width={24}
+										height={24}
+									/>
 									Lorem ipsum dolor sit amet.
 								</p>
 								<p className="flex gap-3">
-									<Image src="/assets/icons/checklist.svg" width={24} height={24} />
+									<Image
+										src="/assets/icons/checklist.svg"
+										alt=""
+										width={24}
+										height={24}
+									/>
 									Lorem ipsum dolor sit amet.
 								</p>
 								<p className="flex gap-3">
-									<Image src="/assets/icons/checklist.svg" width={24} height={24} />
+									<Image
+										src="/assets/icons/checklist.svg"
+										alt=""
+										width={24}
+										height={24}
+									/>
 									Lorem ipsum dolor sit amet.
 								</p>
 							</ul>
@@ -128,6 +156,7 @@ export default function HomePage({ data }) {
 										<li key={index} className="flex gap-3">
 											<Image
 												src="/assets/icons/checklist-yellow.svg"
+												alt=""
 												width={24}
 												height={24}
 											/>
@@ -141,6 +170,7 @@ export default function HomePage({ data }) {
 										<li key={index} className="flex gap-3">
 											<Image
 												src="/assets/icons/checklist-yellow.svg"
+												alt=""
 												width={24}
 												height={24}
 											/>
@@ -160,6 +190,7 @@ export default function HomePage({ data }) {
 								<Image
 									src="/assets/images/landingpage/hero3.png"
 									fill
+									alt=""
 									className="rounded object-cover absolute"
 								/>
 
@@ -191,6 +222,7 @@ export default function HomePage({ data }) {
 									<Image
 										src="/assets/images/landingpage/avatar1.png"
 										fill
+										alt=""
 										className="object-cover  absolute"
 									/>
 								</div>
@@ -208,6 +240,7 @@ export default function HomePage({ data }) {
 									<Image
 										src="/assets/images/landingpage/avatar2.png"
 										fill
+										alt=""
 										className="object-cover  absolute"
 									/>
 								</div>
@@ -225,6 +258,7 @@ export default function HomePage({ data }) {
 									<Image
 										src="/assets/images/landingpage/avatar3.png"
 										fill
+										alt=""
 										className="object-cover  absolute"
 									/>
 								</div>
@@ -250,6 +284,7 @@ export default function HomePage({ data }) {
 							<Image
 								src="/assets/images/landingpage/wave.png"
 								fill
+								alt=""
 								className="absolute"
 							/>
 						</div>

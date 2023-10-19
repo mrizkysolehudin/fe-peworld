@@ -77,6 +77,7 @@ const HomePage = () => {
 									<Image
 										src="/assets/images/landingpage/avatar3.png"
 										fill
+										alt=""
 										className="object-cover  absolute"
 									/>
 								</div>
@@ -111,6 +112,7 @@ const HomePage = () => {
 									<Image
 										src="/assets/images/landingpage/avatar2.png"
 										fill
+										alt=""
 										className="object-cover  absolute"
 									/>
 								</div>
@@ -145,6 +147,7 @@ const HomePage = () => {
 									<Image
 										src="/assets/images/landingpage/avatar1.png"
 										fill
+										alt=""
 										className="object-cover  absolute"
 									/>
 								</div>

@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
 	return (
 		<footer className="bg-[#5E50A1] min-h-[20vw] text-white px-16 py-12 text-sm w-screen">
-			<Image src="/assets/icons/logo-white.png" width={150} height={150} />
+			<Image src="/assets/icons/logo-white.png" alt="" width={150} height={150} />
 
 			<p className="w-3/12 mt-6">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et
