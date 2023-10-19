@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const HomePage = () => {
 	const skillItems = ["Phyton", "JavaScript", "PHP"];
@@ -94,16 +95,18 @@ const HomePage = () => {
 										{skillItems.map((item, index) => (
 											<span
 												key={index}
-												className="py-1 px-4 bg-[#fbb01799] border border-[#FBB017] rounded">
+												className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017]  border border-[#FBB017] rounded">
 												{item}
 											</span>
 										))}
 									</div>
 								</div>
 							</div>
-							<button className="rounded-sm mr-10 flex justify-center items-center h-9 w-[10vw] ml-2 text-white bg-[#5E50A1] hover:bg-[#5E50A1]/90 ">
+							<Link
+								href={`/profile/worker/1`}
+								className="rounded-sm mr-10 flex justify-center items-center h-9 w-[10vw] ml-2 text-white bg-[#5E50A1] hover:bg-[#5E50A1]/90 ">
 								Lihat Profile
-							</button>
+							</Link>
 						</article>
 
 						<article className="flex justify-between bg-white px-6 py-9 items-center">
@@ -129,16 +132,18 @@ const HomePage = () => {
 										{skillItems.map((item, index) => (
 											<span
 												key={index}
-												className="py-1 px-4 bg-[#fbb01799] border border-[#FBB017] rounded">
+												className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017] border border-[#FBB017] rounded">
 												{item}
 											</span>
 										))}
 									</div>
 								</div>
 							</div>
-							<button className="rounded-sm mr-10 flex justify-center items-center h-9 w-[10vw] ml-2 text-white bg-[#5E50A1] hover:bg-[#5E50A1]/90 ">
+							<Link
+								href={`/profile/worker/1`}
+								className="rounded-sm mr-10 flex justify-center items-center h-9 w-[10vw] ml-2 text-white bg-[#5E50A1] hover:bg-[#5E50A1]/90 ">
 								Lihat Profile
-							</button>
+							</Link>
 						</article>
 
 						<article className="flex justify-between bg-white px-6 py-9 items-center">
@@ -164,16 +169,18 @@ const HomePage = () => {
 										{skillItems.map((item, index) => (
 											<span
 												key={index}
-												className="py-1 px-4 bg-[#fbb01799] border border-[#FBB017] rounded">
+												className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017] border border-[#FBB017] rounded">
 												{item}
 											</span>
 										))}
 									</div>
 								</div>
 							</div>
-							<button className="rounded-sm mr-10 flex justify-center items-center h-9 w-[10vw] ml-2 text-white bg-[#5E50A1] hover:bg-[#5E50A1]/90 ">
+							<Link
+								href={`/profile/worker/1`}
+								className="rounded-sm mr-10 flex justify-center items-center h-9 w-[10vw] ml-2 text-white bg-[#5E50A1] hover:bg-[#5E50A1]/90 ">
 								Lihat Profile
-							</button>
+							</Link>
 						</article>
 					</div>
 

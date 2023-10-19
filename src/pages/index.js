@@ -4,9 +4,8 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import Footer from "@/components/Global/Footer";
 import Navbar from "@/components/Global/Navbar";
 import Link from "next/link";
-import { baseUrl } from "@/helpers/baseUrl";
 
-export default function HomePage({ data }) {
+export default function HomePage() {
 	const skillTalents = [
 		"Java",
 		"Kotlin",
@@ -298,10 +297,10 @@ export default function HomePage({ data }) {
 	);
 }
 
-export async function getServerSideProps() {
-	const res = await fetch(`${baseUrl}/users`);
-	const data = await res.json();
-	console.log(data);
+// export async function getServerSideProps() {
+// 	const res = await fetch(`${baseUrl}/users`);
+// 	const data = await res.json();
+// 	console.log(data);
 
-	return { props: { data } };
-}
+// 	return { props: { data } };
+// }

@@ -10,6 +10,7 @@ import {
 	UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProfileWorkerPage = () => {
 	const skillTalents = [
@@ -58,11 +59,11 @@ const ProfileWorkerPage = () => {
 								fringilla, vestibulum risus at.
 							</p>
 
-							<button
-								type="button"
-								className="mt-6 rounded bg-[#5E50A1] px-3.5 pt-2 pb-2.5 w-[22vw] text-sm font-semibold text-white shadow-sm hover:bg-[#5E50A1]/90">
+							<Link
+								href={`/profile/worker/edit`}
+								className="mt-6 block mx-auto rounded bg-[#5E50A1] px-3.5 pt-2 pb-2.5 w-[22vw] text-sm font-semibold text-white shadow-sm hover:bg-[#5E50A1]/90">
 								Edit profile
-							</button>
+							</Link>
 						</div>
 
 						<div className="mt-10">
@@ -72,7 +73,7 @@ const ProfileWorkerPage = () => {
 								{skillTalents.map((item, index) => (
 									<span
 										key={index}
-										className="py-1 px-4 bg-[#fbb01799] border border-[#FBB017] rounded">
+										className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017]  border border-[#FBB017] rounded">
 										{item}
 									</span>
 								))}
