@@ -1,6 +1,6 @@
 import Footer from "@/components/Global/Footer";
 import Navbar from "@/components/Global/Navbar";
-import React from "react";
+import React, { useState } from "react";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import {
 	MapPinIcon,
@@ -11,8 +11,12 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import SectionPortfolio from "@/components/Profile/SectionPortfolio";
+import SectionWorkExperiences from "@/components/Profile/SectionWorkExperiences";
 
 const ProfileWorkerPage = () => {
+	const [isTabPortfolioActive, setIsTabPortfolioActive] = useState(true);
+
 	const skillTalents = [
 		"Java",
 		"Kotlin",
@@ -98,36 +102,28 @@ const ProfileWorkerPage = () => {
 
 					<section className="mt-16 w-[80vw] mx-auto">
 						<div className="flex gap-8 text-2xl">
-							<button className="text-black font-semibold underline underline-offset-8 ">
+							<button
+								onClick={() => setIsTabPortfolioActive(true)}
+								className={`font-semibold text-black ${
+									isTabPortfolioActive
+										? " underline underline-offset-8 decoration-[#5E50A1] decoration-4"
+										: "text-gray-400"
+								}`}>
 								Portofolio
 							</button>
-							<button className="text-gray-400 font-semibold ">
+							<button
+								onClick={() => setIsTabPortfolioActive(false)}
+								className={`font-semibold text-black ${
+									isTabPortfolioActive
+										? "text-gray-400"
+										: " underline underline-offset-8 decoration-[#5E50A1] decoration-4"
+								}`}>
 								Pengalaman kerja
 							</button>
 						</div>
 
-						<div className="flex mt-10 flex-wrap gap-x-4 gap-y-6">
-							<article>
-								<div className="relative w-[16vw] h-[10vw] mx-auto">
-									<Image src="/assets/images/image-portfolio.png" alt="avatar" fill />
-								</div>
-								<p className="text-gray-800 text-center mt-1">Remainder app</p>
-							</article>
-
-							<article>
-								<div className="relative w-[16vw] h-[10vw] mx-auto">
-									<Image src="/assets/images/image-portfolio3.png" alt="avatar" fill />
-								</div>
-								<p className="text-gray-800 text-center mt-1">Social media app</p>
-							</article>
-
-							<article>
-								<div className="relative w-[16vw] h-[10vw] mx-auto">
-									<Image src="/assets/images/image-portfolio2.png" alt="avatar" fill />
-								</div>
-								<p className="text-gray-800 text-center mt-1">Project management web</p>
-							</article>
-						</div>
+						{isTabPortfolioActive && <SectionPortfolio />}
+						{!isTabPortfolioActive && <SectionWorkExperiences />}
 					</section>
 				</div>
 			</main>
