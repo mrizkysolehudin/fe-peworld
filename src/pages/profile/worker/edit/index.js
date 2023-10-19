@@ -21,7 +21,7 @@ const EditProfileCompanyPage = () => {
 
 			<main className="w-screen">
 				<div className="bg-[#5E50A1] w-full h-[24vw]"></div>
-				<div className="bg-[#F6F7F8] px-32 relative h-[158vw]">
+				<div className="bg-[#F6F7F8] px-32 relative h-[164vw]">
 					<div className="w-full h-full absolute -mt-[19vw] flex gap-12">
 						<section className="w-[30%]">
 							<article className="bg-white rounded-md">
