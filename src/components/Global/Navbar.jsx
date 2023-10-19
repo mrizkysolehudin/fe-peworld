@@ -1,12 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
 	const router = useRouter();
 	const currentUrl = router.asPath;
-	console.log("URL saat ini:", currentUrl);
+	const [isLogin, setIsLogin] = useState(false);
+	console.log("saat ini ooooooo", isLogin);
+
+	useEffect(() => {
+		if (currentUrl !== "/") {
+			setIsLogin(true);
+		} else {
+			setIsLogin(false);
+		}
+	}, []);
 
 	return (
 		<nav className="flex justify-between py-7 px-20 w-screen shadow-lg">

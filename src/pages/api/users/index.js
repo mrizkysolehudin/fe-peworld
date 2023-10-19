@@ -1,20 +1,31 @@
-export default function handler(req, res) {
-	const body = req.body;
+import { selectAllusers, insertRecruiter } from "@/models/userModel";
 
-	if (req.method !== "POST") {
-		res.status(405).json({ message: "Only POST requests allowed" });
+export default async function handler(req, res) {
+	if (req.method === "GET") {
+		selectAllusers()
+			.then((result) => {
+				return res.json({ message: "get users success", data: result.rows });
+			})
+			.catch((error) => {
+				return res.json({ message: "error", error: error });
+			});
 	}
 
-	if (!body.email) {
-		res.status(404).json({ message: "Email not found" });
-	}
-	if (!body.password) {
-		res.status(404).json({ message: "Password not found" });
-	}
+	if (req.method === "POST") {
+		const { name, email, phone } = req.body;
 
-	if (body.email === "bim" && body.password === "1212") {
-		res.status(200).json({ message: "login success" });
-	} else {
-		res.status(404).json({ message: "Email or password is wrong" });
+		const data = {
+			name: name,
+			email: email,
+			phone: phone,
+		};
+
+		insertRecruiter(data)
+			.then(() => {
+				return res.json({ message: "create user success", data });
+			})
+			.catch((error) => {
+				return res.json({ message: "error", error });
+			});
 	}
 }
