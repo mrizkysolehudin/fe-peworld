@@ -1,5 +1,6 @@
 import db from "@/configs/db";
 
+// user
 const selectAllusers = () => {
 	return db.query(`
 	SELECT * FROM users 
@@ -10,6 +11,19 @@ const selectUser = (user_id) => {
 	return db.query(`SELECT * FROM users WHERE user_id=${user_id}`);
 };
 
+const deleteUser = (user_id) => {
+	return db.query(`DELETE FROM users WHERE user_id=${user_id}`);
+};
+
+const findEmail = (email) => {
+	return db.query(`SELECT * FROM users WHERE email='${email}'`);
+};
+
+const countDataUsers = () => {
+	return db.query("SELECT COUNT(*) FROM users");
+};
+
+// recruiter
 const selectRecruiter = (user_id) => {
 	return db.query(`SELECT * FROM users WHERE ROLE=0 AND user_id=${user_id}`);
 };
@@ -38,6 +52,7 @@ const updateRecruiter = (data) => {
 	);
 };
 
+// worker
 const selectWorker = (user_id) => {
 	return db.query(`SELECT * FROM users WHERE ROLE=1 AND user_id=${user_id}`);
 };
@@ -55,18 +70,6 @@ const updateWorker = (data) => {
 	return db.query(
 		`UPDATE users SET name='${name}', email='${email}', phone='${phone}', photo='${photo}' WHERE ROLE=1 AND user_id=${user_id}`,
 	);
-};
-
-const deleteUser = (user_id) => {
-	return db.query(`DELETE FROM users WHERE user_id=${user_id}`);
-};
-
-const findEmail = (email) => {
-	return db.query(`SELECT * FROM users WHERE email='${email}'`);
-};
-
-const countDataUsers = () => {
-	return db.query("SELECT COUNT(*) FROM users");
 };
 
 module.exports = {

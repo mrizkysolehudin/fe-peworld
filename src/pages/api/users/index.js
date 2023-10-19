@@ -1,8 +1,9 @@
-import { selectAllusers, insertRecruiter } from "@/models/userModel";
+import userModel from "@/models/userModel";
 
 export default async function handler(req, res) {
 	if (req.method === "GET") {
-		selectAllusers()
+		userModel
+			.selectAllusers()
 			.then((result) => {
 				return res.json({ message: "get users success", data: result.rows });
 			})
@@ -20,7 +21,8 @@ export default async function handler(req, res) {
 			phone: phone,
 		};
 
-		insertRecruiter(data)
+		userModel
+			.insertRecruiter(data)
 			.then(() => {
 				return res.json({ message: "create user success", data });
 			})
